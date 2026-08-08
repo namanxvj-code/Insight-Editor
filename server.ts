@@ -1,6 +1,6 @@
 import express from "express";
 import path from "path";
-import { createServer as createViteServer } from "vite";
+
 import { GoogleGenAI, Type } from "@google/genai";
 import dotenv from "dotenv";
 
@@ -202,8 +202,9 @@ Give them a creative, fitting bio, theme-matched Unsplash photos, and realistic 
 
 // Serve frontend assets and SPA Fallback
 const startServer = async () => {
-  if (process.env.NODE_ENV !== "production") {
-    const vite = await createViteServer({
+ if (process.env.NODE_ENV !== "production") {
+  const { createServer: createViteServer } = await import("vite");
+  const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: "spa",
     });
