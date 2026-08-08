@@ -1,0 +1,6 @@
+{
+  "name": "Instagram Profile Simulator",
+  "description": "A standalone visual Instagram profile editor and mockup creator for presentation planning, design templates, and content simulation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
